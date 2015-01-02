@@ -212,7 +212,7 @@ function rp_Slideshow_Shortcode(){
   $order = get_option('rpslideshow_display_order');
  
   
-  $slidshow = "";  
+   
   $slideshow = '<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">  
    							<ol class="carousel-indicators">';
 								if($order != ""){
