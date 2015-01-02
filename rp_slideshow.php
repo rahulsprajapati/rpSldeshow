@@ -34,8 +34,7 @@ function rp_slideshow(){
 
 //Add Option in Setting Menu
 function rp_slideshow_menu() {  
-  
-    $rp_slideshow_dir = plugin_dir_path( __FILE__ );
+      
   
 ?>
 <div class="rp_loader">
