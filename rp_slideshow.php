@@ -272,10 +272,10 @@ function rpslideshow_delete_imagePost() {
 		$order = explode ( ',', $order );
 		for($i = 0; $i < count ( $order ); $i ++) {
 			if ($order [$i] != $postId) {
-				if ($updateorder == "") {
-					$updateorder .= $order [$i];
-				} else {
+				if ($updateorder != "") {
 					$updateorder .= "," . $order [$i];
+				} else {
+					$updateorder .= $order [$i];					
 				}
 			}
 		}
