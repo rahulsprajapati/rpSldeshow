@@ -113,11 +113,8 @@ function ajax_rp_ajax_upload() {
 			$id = wp_insert_post ( $my_post );
 			
 			$order = get_option ( 'rpslideshow_display_order' );
-			if ($order != "") {
-				$order = $order . "," . $id;
-			} else {
-				$order = $order . $id;
-			}
+			$order = getOrder($order,$id);
+			
 			update_option ( 'rpslideshow_display_order', $order );
 			
 			echo "0";
@@ -129,6 +126,15 @@ function ajax_rp_ajax_upload() {
 	}
 	
 	die ();
+}
+
+function getOrder($order,$id){
+	if ($order != "") {
+		$order = $order . "," . $id;
+	} else {
+		$order = $order . $id;
+	}
+	return $order;
 }
 
 add_action ( 'wp_ajax_rpslideshow_ajax_images_list', 'rpslideshow_ajax_images_list' );
@@ -185,11 +191,8 @@ function rpslideshow_ajax_update_order() {
 	$displayorder = "";
 	
 	for($i = 0; $i < count ( $newOrder ); $i ++) {
-		if ($displayorder != "") {
-			$displayorder = $displayorder . ',' . $newOrder [$i];
-		} else {
-			$displayorder = $newOrder [$i];
-		}
+		$displayorder = getOrder($displayorder,$newOrder [$i]);
+		
 	}
 	update_option ( 'rpslideshow_display_order', $displayorder );
 	
@@ -272,11 +275,7 @@ function rpslideshow_delete_imagePost() {
 		$order = explode ( ',', $order );
 		for($i = 0; $i < count ( $order ); $i ++) {
 			if ($order [$i] != $postId) {
-				if ($updateorder != "") {
-					$updateorder .= "," . $order [$i];
-				} else {
-					$updateorder .= $order [$i];					
-				}
+				$updateorder = ($updateorder,$order [$i]);
 			}
 		}
 	}
