@@ -275,7 +275,7 @@ function rpslideshow_delete_imagePost() {
 		$order = explode ( ',', $order );
 		for($i = 0; $i < count ( $order ); $i ++) {
 			if ($order [$i] != $postId) {
-				$updateorder = ($updateorder,$order [$i]);
+				$updateorder = getOrder($updateorder,$order [$i]);
 			}
 		}
 	}
