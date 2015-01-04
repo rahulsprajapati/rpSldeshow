@@ -7,7 +7,8 @@
 * **License:** [GPL v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Description ##
-	This is One Wordpress Plugin, Which is use for display responsive slideshow using shortcode [rp_Slideshow].
+	This is One Wordpress Plugin, Which is use for display responsive slideshow 
+	using shortcode [rp_Slideshow].
 	
 ## Installation ##
 1. Download Plugin. 
