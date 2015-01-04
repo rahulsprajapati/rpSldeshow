@@ -1,114 +1,43 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
-Tags: comments, spam
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# rpSldeshow #
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+  Version:  1.0.0
 
-== Description ==
+* **Author:** [Rahul Prajapati] (http://resume.developerrahul.com)
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+* **License:** [GPL v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+## Description ##
+	This is One Wordpress Plugin, Which is use for display responsive slideshow using shortcode [rp_Slideshow].
+	
+## Installation ##
+1. Download Plugin. 
+   [Download] (https://codeload.github.com/rahulsprajapati/rpSldeshow/zip/master) 
 
-A few notes about the sections above:
+2. Install rpSldeshow plugin from the 'Plugins' section in your dashboard (Plugins > Add New > Upload Plugin -> Select Plugin Zip File From Downloaded Location).
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+3. Alternatively you can Unzip it and upload it to the plugins folder of your WordPress installation (wp-content/plugins/ directory of your WordPress installation).
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+4. Activate it through the 'Plugins' section.
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+5. Now Here we go. Installation is Complete.
 
-== Installation ==
+## How To Use ##
+1. As you Install & Activate plugin there is RP_Slideshow Settings Page will be added in Settings Section (Settings > RP_Slideshow Settings).
 
-This section describes how to install the plugin and get it working.
+2. Here You can Add slide for your slider.
 
-e.g.
+3. Enter Your slide name in textbox and select your slide image by Upload Image Button and click on Add Slide Button to add Slide.
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+4. Here you can reorder your slides (by drag and drop) and save your slide order by click on save slideshow button.
 
-== Frequently Asked Questions ==
+5. You can delete the slide by click on 'X' button on your slide.
 
-= A question that someone might have =
+6. After you added your slides you can now use slideshow using [rp_Slideshow] shortcode.
 
-An answer to that question.
+7. Add New Post add shortcode [rp_Slideshow] in texteditor and publish the post. 
 
-= What about foo bar? =
+8. View your post, you can see your slideshow on your post.
 
-Answer to foo bar dilemma.
+Thank You...
 
-== Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets 
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png` 
-(or jpg, jpeg, gif).
-2. This is the second screen shot
-
-== Changelog ==
-
-= 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
