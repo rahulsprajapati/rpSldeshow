@@ -30,7 +30,7 @@ function rp_slideshow() {
 function rp_slideshow_menu() {
 	?>
 <div class="rp_loader">
-	<img src="<?php echo plugins_url('/css/loader.GIF', __FILE__); ?>" />
+	<img src="<?php echo plugins_url('/lib/css/loader.GIF', __FILE__); ?>" />
 </div>
 <div class="rp_slideshow_admin rp_container">
 	<h2>Upload Images (shortcode : [rp_Slideshow])</h2>
@@ -70,18 +70,18 @@ function rp_slideshow_script($hook) {
 	all_scripts ();
 }
 function all_scripts() {
-	wp_enqueue_style ( 'rp_images_style', plugins_url ( '/css/rp_images_style.css', __FILE__ ), array (), null, 'all' );
+	wp_enqueue_style ( 'rp_images_style', plugins_url ( 'lib/css/rp_images_style.css', __FILE__ ), array (), null, 'all' );
 	
-	wp_enqueue_script ( 'rpSlideshow_jquery', plugin_dir_url ( __FILE__ ) . 'js/jquery-1.10.2.js', array (
+	wp_enqueue_script ( 'rpSlideshow_jquery', plugin_dir_url ( __FILE__ ) . 'lib/js/jquery-1.10.2.js', array (
 			'jquery' 
 	), '1.0.0', false );
-	wp_enqueue_script ( 'rpSlideshow_jquery_ui', plugin_dir_url ( __FILE__ ) . 'js/jquery-ui.js', array (
+	wp_enqueue_script ( 'rpSlideshow_jquery_ui', plugin_dir_url ( __FILE__ ) . 'lib/js/jquery-ui.js', array (
 			'rpSlideshow_jquery' 
 	), '1.0.0', false );
-	wp_enqueue_script ( 'rpSlideshow_script', plugin_dir_url ( __FILE__ ) . 'js/script.js', array (
+	wp_enqueue_script ( 'rpSlideshow_script', plugin_dir_url ( __FILE__ ) . 'lib/js/script.js', array (
 			'rpSlideshow_jquery_ui' 
 	), '1.0.0', false );
-	wp_enqueue_script ( 'rpSlideshow_ajax_script', plugin_dir_url ( __FILE__ ) . 'js/ajax_script.js', array (
+	wp_enqueue_script ( 'rpSlideshow_ajax_script', plugin_dir_url ( __FILE__ ) . 'lib/js/ajax_script.js', array (
 			'rpSlideshow_script' 
 	), '1.0.0', true );
 }
@@ -202,12 +202,12 @@ function rpslideshow_ajax_update_order() {
 add_shortcode ( 'rp_Slideshow', 'rp_Slideshow_Shortcode' );
 function rp_Slideshow_Shortcode() {
 	all_scripts ();
-	wp_enqueue_style ( 'rpSlideshow_bootstrap_style', plugins_url ( '/css/bootstrap.min.css', __FILE__ ), array (), null, 'all' );
+	wp_enqueue_style ( 'rpSlideshow_bootstrap_style', plugins_url ( '/lib/css/bootstrap.min.css', __FILE__ ), array (), null, 'all' );
 	
-	wp_enqueue_script ( 'rpSlideshow_bootstrap_jq_script', plugin_dir_url ( __FILE__ ) . 'js/jquery.min.js', array (
+	wp_enqueue_script ( 'rpSlideshow_bootstrap_jq_script', plugin_dir_url ( __FILE__ ) . 'lib/js/jquery.min.js', array (
 			'rpSlideshow_script' 
 	), '1.0.0', false );
-	wp_enqueue_script ( 'rpSlideshow_bootstrap_script', plugin_dir_url ( __FILE__ ) . 'js/bootstrap.min.js', array (
+	wp_enqueue_script ( 'rpSlideshow_bootstrap_script', plugin_dir_url ( __FILE__ ) . 'lib/js/bootstrap.min.js', array (
 			'rpSlideshow_bootstrap_jq_script' 
 	), '1.0.0', false );
 	
